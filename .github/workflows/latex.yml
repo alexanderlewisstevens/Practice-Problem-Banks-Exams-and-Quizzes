@@ -17,5 +17,4 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: 2370_question_banks/Quiz_1_Bank.tex
-          output_directory: 2370_question_banks # Specify output directory explicitly
           latexmk_use_lualatex: true # Ensure compatibility with modern LaTeX distributions
