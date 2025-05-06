@@ -3,7 +3,7 @@ name: Build PDF
 on:
   push:
     paths:
-      - '**.tex'
+      - '**/*.tex'
   workflow_dispatch:
 
 jobs:
@@ -11,15 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Compile LaTeX to PDF
         uses: xu-cheng/latex-action@v2
         with:
           root_file: 2370_question_banks/Quiz_1_Bank.tex
+          latexmk_use_lualatex: true # Ensure compatibility with modern LaTeX distributions
 
       - name: Upload PDF
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: quiz-1-pdf
           path: 2370_question_banks/Quiz_1_Bank.pdf
