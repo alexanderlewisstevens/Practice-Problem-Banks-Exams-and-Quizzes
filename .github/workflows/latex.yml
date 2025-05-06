@@ -16,10 +16,10 @@ jobs:
       - name: Compile LaTeX to PDF
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: 2370_question_banks/Quiz_1_Bank.tex
+          root_file: "**/*.tex"
 
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
           name: quiz-1-pdf
-          path: 2370_question_banks/Quiz_1_Bank.pdf
+          path: "**/*.pdf"
