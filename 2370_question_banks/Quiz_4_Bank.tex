@@ -1,0 +1,126 @@
+\documentclass[12pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
+}
+
+\begin{document}
+
+\title{Practice Problems: Quicksort, Convex Hull, and Recurrence Relations}
+\date{}
+\maketitle
+
+\vspace{0.3in}
+\noindent\textbf{Name:} \rule{4in}{0.4pt}
+
+\vspace{0.3in}
+
+\begin{questions}
+
+% --------------------
+% Quicksort
+% --------------------
+
+\section*{Quicksort and Randomized Quicksort}
+
+\question[4] Describe how Quicksort partitions an array. What happens during each recursive step?
+
+\vspace{1.2in}
+
+\question[4] For the input array \([6, 5, 4, 1, 2, 3]\), trace the calls made by Quicksort when the last element is always chosen as pivot. Write the contents of the array after each 
+
+\vspace{2in}
+
+\question[4] What is the best-case scenario for Quicksort, and what input pattern produces it?
+
+\vspace{1in}
+
+\question[4] What is the worst-case scenario for Quicksort, and what input pattern produces it?
+
+\vspace{1in}
+
+\question[4] Write the recurrence for Quicksort's runtime in the best-case (perfectly balanced splits) and solve it using the Master Theorem.
+
+\vspace{1.5in}
+
+\question[4] Write the recurrence for Quicksort's runtime in the worst-case (one element per partition) and solve it.
+
+
+% --------------------
+% Convex Hull
+% --------------------
+
+\newpage
+\section*{Convex Hull}
+
+\question[4] Define the Convex Hull problem by stating what the input and output should represent.
+
+\vspace{1.2in}
+
+\question[4] Describe the brute-force approach to computing the convex hull of a set of 2D points. What is its runtime and why?
+
+\vspace{1.5in}
+
+\question[4] Describe the high-level idea behind the QuickHull algorithm.
+
+\vspace{1.2in}
+
+\question[4] What is the worst-case time complexity of QuickHull? Draw a point configurations where it occurs.
+
+\vspace{1.2in}
+
+
+\question[4] Describe the recursive structure of QuickHull and write its recurrence when splits are even.
+
+\vspace{1.5in}
+
+
+% --------------------
+% Recurrences
+% --------------------
+
+\newpage
+\section*{Writing and Solving Recurrences}
+
+\question[4] Write a recurrence relation for the following pseudocode:
+
+\begin{lstlisting}
+def mystery(n):
+    if n <= 1:
+        return 1
+    return 3 * mystery(n//2) + n
+\end{lstlisting}
+
+\vspace{1.2in}
+
+\question[4] Solve the recurrence from the previous problem using the Master Theorem.
+
+\vspace{1.2in}
+
+\question[4] Use the recursion tree method to solve: \( T(n) = T(n/3) + n \)
+
+\vspace{1.5in}
+
+\question[4] Solve \( T(n) = 2T(n/2) + n \) using the Master Theorem.
+
+\vspace{1.2in}
+
+\question[4] Solve \( T(n) = T(n-1) + n \) using the recursion tree method.
+
+\vspace{1.5in}
+
+\question[4] Given a recurrence \( T(n) = 4T(n/2) + n^2 \), classify the function using the Master Theorem.
+
+\vspace{1.2in}
+
+\end{questions}
+
+\end{document}

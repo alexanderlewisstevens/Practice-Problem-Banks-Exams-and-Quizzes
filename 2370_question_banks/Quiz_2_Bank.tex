@@ -1,0 +1,171 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Instruction Counting Worksheet}
+\lhead{CS/Discrete Math}
+\cfoot{\thepage}
+
+\newenvironment{problem}{\vspace{1em}\noindent}{\vspace{2em}}
+
+\title{Instruction Counting Worksheet}
+\date{}
+\begin{document}
+
+\maketitle
+
+\begin{problem}
+\textbf{Problem 1: Count Powers of Two Less Than n}
+
+\begin{lstlisting}[language=Python]
+1: x = 1
+2: count = 0
+3: while x < n:
+4:     x = x * 2
+5:     count += 1
+\end{lstlisting}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+Line \# & Time per execution & \# Executions & Total time for line \\
+\hline
+1 & & & \\
+2 & & & \\
+3 & & & \\
+4 & & & \\
+5 & & & \\
+\hline
+ & & & \\
+\textbf{Total T(n)} & & & \\
+\hline
+\end{tabular}
+\end{problem}
+
+\begin{problem}
+\textbf{Problem 2: Nested Addition of Indexes}
+
+\begin{lstlisting}[language=Python]
+1: i = 0
+2: total = 0
+3: while i < n:
+4:     j = 0
+5:     while j < n:
+6:         total += i + j
+7:         j += 1
+8:     i += 1
+\end{lstlisting}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+Line \# & Time per execution & \# Executions & Total time for line \\
+\hline
+1 & & & \\
+2 & & & \\
+3 & & & \\
+4 & & & \\
+5 & & & \\
+6 & & & \\
+7 & & & \\
+8 & & & \\
+\hline
+ & & & \\
+\textbf{Total T(n)} & & & \\
+\hline
+\end{tabular}
+\end{problem}
+
+\begin{problem}
+\textbf{Problem 3: Decrementing Counter Loop}
+
+\begin{lstlisting}[language=Python]
+1: x = n
+2: total = 0
+3: while x > 0:
+4:     total += x
+5:     x = x // 2
+\end{lstlisting}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+Line \# & Time per execution & \# Executions & Total time for line \\
+\hline
+1 & & & \\
+2 & & & \\
+3 & & & \\
+4 & & & \\
+5 & & & \\
+\hline
+ & & & \\
+\textbf{Total T(n)} & & & \\
+\hline
+\end{tabular}
+\end{problem}
+
+\begin{problem}
+\textbf{Problem 4: Nested While Index Product}
+
+\begin{lstlisting}[language=Python]
+1: i = 0
+2: total = 0
+3: while i < n:
+4:     j = 0
+5:     while j < i:
+6:         total += i * j
+7:         j += 1
+8:     i += 1
+\end{lstlisting}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+Line \# & Time per execution & \# Executions & Total time for line \\
+\hline
+1 & & & \\
+2 & & & \\
+3 & & & \\
+4 & & & \\
+5 & & & \\
+6 & & & \\
+7 & & & \\
+8 & & & \\
+\hline
+ & & & \\
+\textbf{Total T(n)} & & & \\
+\hline
+\end{tabular}
+\end{problem}
+
+\begin{problem}
+\textbf{Problem 5: While Loop with Early Exit}
+
+\begin{lstlisting}[language=Python]
+1: i = 0
+2: while i < len(A):
+3:     if A[i] < 0:
+4:         break
+5:     i += 1
+\end{lstlisting}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+Line \# & Time per execution & \# Executions & Total time for line \\
+\hline
+1 & & & \\
+2 & & & \\
+3 & & & \\
+4 & & & \\
+5 & & & \\
+\hline
+ & & & \\
+\textbf{Total T(n)} & & & \\
+\hline
+\end{tabular}
+\end{problem}
+
+\end{document}
