@@ -20,7 +20,7 @@ jobs:
           latexmk_use_lualatex: true # Ensure compatibility with modern LaTeX distributions
 
       - name: Upload PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: quiz-1-pdf
           path: 2370_question_banks/Quiz_1_Bank.pdf
