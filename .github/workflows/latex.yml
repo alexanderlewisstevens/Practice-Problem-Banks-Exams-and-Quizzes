@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Build LaTeX documents
 
 on:
   push:
@@ -12,13 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Compile LaTeX document
+      - name: Compile all LaTeX documents
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: beans.tex
+          root_file: '*.tex'
 
-      - name: Upload PDF
+      - name: Upload PDFs
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
-          path: beans.pdf
+          name: PDFs
+          path: '*.pdf'
